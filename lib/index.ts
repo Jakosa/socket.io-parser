@@ -85,8 +85,11 @@ export class Encoder {
 
     // json data
     if (null != obj.data) {
-      if(typeof obj.data === 'string')
+      console.log('asd0');
+      if(typeof obj.data === 'string') {
         str += obj.data;
+        console.log('asd');
+      }
       else
         str += JSON.stringify(obj.data);
     }
