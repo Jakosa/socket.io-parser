@@ -85,7 +85,10 @@ export class Encoder {
 
     // json data
     if (null != obj.data) {
-      str += JSON.stringify(obj.data);
+      if(typeof obj.data === 'string')
+        str += obj.data;
+      else
+        str += JSON.stringify(obj.data);
     }
 
     debug("encoded %j as %s", obj, str);
